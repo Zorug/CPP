@@ -5,25 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/16 22:02:50 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/03/16 22:52:53 by cgross-s         ###   ########.fr       */
+/*   Created: 2026/05/07 20:31:13 by cgross-s          #+#    #+#             */
+/*   Updated: 2026/05/07 21:48:12 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream> // saída, como stdio.h
-#include <cctype>
+#include <iostream>	// cout
+#include <cctype>	// toupper
 
-int main (int argc, char **args)
+int main(int argc, char **argv)
 {
-	// Sem argumentos: imprime o ruido padrao pedido no enunciado.
+
 	if (argc == 1)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	// Percorre cada argumento (ignorando args[0], que e o nome do programa).
-	for (int i = 1; i < argc; i += 1)
-		// Converte cada caractere para maiuscula antes de imprimir.
-		for (int j = 0; args[i][j]; j += 1)
-			std::cout << static_cast<char>(
-				std::toupper(static_cast<unsigned char>(args[i][j])));
-	std::cout << std::endl;
+
+	else if (argc > 1) {
+		for(int i = 1; i < argc; i++) { // here we are passing word by word
+
+			for(int j = 0; argv[i][j]; j++) { // here we are passing letter to letter
+
+			/*	std::toupper() waits for: unsigned char and argv is char type
+				static_cast is an operator that performs an explicit type conversion.
+				toupper returns an int, so it need to be converted back to char */
+				
+				std::cout << static_cast<char>(
+					std::toupper(static_cast<unsigned char>(argv[i][j])));
+			}
+		}
+	}
+	std::cout << '\n';
+
 	return 0;
 }
