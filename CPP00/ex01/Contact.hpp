@@ -15,24 +15,21 @@
 
 #include <string> // std::string
 
-class Contact {
+class Contact
+{
 	private:
-		//std::string name;
 		std::string firstName;
 		std::string lastName;
 		std::string nickname;
 
 	public:
-		//void setName(std::string value); // Função que guarda um nome.
 		void setFirstName(std::string value);
 		void setLastName(std::string value);
 		void setNickname(std::string value);
 		
-		//std::string getName(); // Função que devolve o nome.
 		std::string getFirstName();
 		std::string getLastName();
 		std::string getNickname();
-
 };
 
 #endif /* CONTACT_HPP */

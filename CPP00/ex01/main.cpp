@@ -16,67 +16,46 @@
 
 int main()
 {
+    // aqui já é criado o construtor
     PhoneBook pb;
 
-    pb.test();
+    std::string command;
 
-    //Contact c; // Cria um objeto chamado c.
-    //Contact contacts[8];
+    while (true) // Loop infinito.
+    {
+        std::cout << "Enter command: ";
 
-    //contacts[0].setFirstName("Joao");
-    //contacts[1].setFirstName("Ana");
+        std::getline(std::cin, command);
 
-    //c.setFirstName("Joao");
-    //c.setLastName("Silva");
-    //c.setNickname("joca");
+        if (command == "ADD")
+        {
+            // Criar variáveis temporárias
+            std::string firstName;
+            std::string lastName;
+            std::string nickname;
 
-    //std::cout << contacts[0].getFirstName() << std::endl;
-    //std::cout << contacts[1].getFirstName() << std::endl;
-    
-    //std::cout << c.getFirstName() << std::endl;
-    //std::cout << c.getLastName() << std::endl;
-    //std::cout << c.getNickname() << std::endl;
+            // Ler input
+            std::cout << "First name: ";
+            std::getline(std::cin, firstName);
+
+            std::cout << "Last name: ";
+            std::getline(std::cin, lastName);
+
+            std::cout << "Nickname: ";
+            std::getline(std::cin, nickname);
+
+            // Enviar para o PhoneBook
+            pb.addContact(firstName, lastName, nickname);
+        }
+        else if (command == "SEARCH")
+        {
+            pb.showContacts();
+        }
+        else if (command == "EXIT")
+        {
+            break;
+        }
+    }
 
     return 0;
 }
-
-/*
-PASSO 1
-
-Primeiro faz UMA classe simples.
-
-Nem precisa ser o exercício ainda.
-
-Faz:
-
-atributo name
-setName
-getName
-
-Até entenderes.
-
-PASSO 2
-
-Depois expande para:
-
-first name
-last name
-nickname
-PASSO 3
-
-Depois cria:
-
-Contact contacts[8];
-
-Aí vais perceber:
-
-“ahhh, o PhoneBook é só um array de objetos”
-
-PASSO 4
-
-Só depois começa:
-
-ADD
-SEARCH
-EXIT
-*/
