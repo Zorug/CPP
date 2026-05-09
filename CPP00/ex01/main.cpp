@@ -12,18 +12,30 @@
 
 #include <iostream>
 #include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 int main()
 {
-    Contact c; // Cria um objeto chamado c.
+    PhoneBook pb;
 
-    c.setFirstName("Joao");
-    c.setLastName("Silva");
-    c.setNickname("joca");
+    pb.test();
 
-    std::cout << c.getFirstName() << std::endl;
-    std::cout << c.getLastName() << std::endl;
-    std::cout << c.getNickname() << std::endl;
+    //Contact c; // Cria um objeto chamado c.
+    //Contact contacts[8];
+
+    //contacts[0].setFirstName("Joao");
+    //contacts[1].setFirstName("Ana");
+
+    //c.setFirstName("Joao");
+    //c.setLastName("Silva");
+    //c.setNickname("joca");
+
+    //std::cout << contacts[0].getFirstName() << std::endl;
+    //std::cout << contacts[1].getFirstName() << std::endl;
+    
+    //std::cout << c.getFirstName() << std::endl;
+    //std::cout << c.getLastName() << std::endl;
+    //std::cout << c.getNickname() << std::endl;
 
     return 0;
 }
