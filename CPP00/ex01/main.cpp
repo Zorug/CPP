@@ -17,9 +17,13 @@ int main()
 {
     Contact c; // Cria um objeto chamado c.
 
-    c.setName("Joao"); // Chamar método
+    c.setFirstName("Joao");
+    c.setLastName("Silva");
+    c.setNickname("joca");
 
-    std::cout << c.getName() << std::endl; // Mostrar resultado
+    std::cout << c.getFirstName() << std::endl;
+    std::cout << c.getLastName() << std::endl;
+    std::cout << c.getNickname() << std::endl;
 
     return 0;
 }

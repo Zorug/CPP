@@ -13,16 +13,25 @@
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
-//# include <iostream>
 #include <string> // std::string
 
 class Contact {
 	private:
-		std::string name;
+		//std::string name;
+		std::string firstName;
+		std::string lastName;
+		std::string nickname;
 
 	public:
-		void setName(std::string value); // Função que guarda um nome.
-		std::string getName(); // Função que devolve o nome.
+		//void setName(std::string value); // Função que guarda um nome.
+		void setFirstName(std::string value);
+		void setLastName(std::string value);
+		void setNickname(std::string value);
+		
+		//std::string getName(); // Função que devolve o nome.
+		std::string getFirstName();
+		std::string getLastName();
+		std::string getNickname();
 
 };
 

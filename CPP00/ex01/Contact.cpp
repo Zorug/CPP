@@ -12,13 +12,33 @@
 
 #include "Contact.hpp"
 
-
-void Contact::setName(std::string value) // “a função setName da classe Contact”
+//setter
+void Contact::setFirstName(std::string value)
 {
-    name = value;
+    firstName = value;
 }
 
-std::string Contact::getName() // devolve o valor guardado
+// devolve o valor guardado (getter)
+std::string Contact::getFirstName()
 {
-    return name;
+    return firstName;
+}
+
+
+void Contact::setLastName(std::string value)
+{
+    lastName = value;
+}
+std::string Contact::getLastName()
+{
+    return lastName;
+}
+
+void Contact::setNickname(std::string value)
+{
+    nickname = value;
+}
+std::string Contact::getNickname()
+{
+    return nickname;
 }
