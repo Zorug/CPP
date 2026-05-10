@@ -6,7 +6,7 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 19:22:44 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/05/10 21:30:41 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/05/10 22:04:56 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,9 @@ class PhoneBook
             std::string darkestSecret);
 
         void showContacts();
-
         void displayContact(int index);
+
+        int getTotalContacts();
 };
 
 #endif

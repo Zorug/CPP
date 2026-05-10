@@ -6,7 +6,7 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 19:22:33 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/05/10 21:42:53 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/05/10 22:05:57 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,4 +85,9 @@ void PhoneBook::displayContact(int index)
 
     std::cout << "Darkest secret: "
               << contacts[index].getDarkestSecret() << std::endl;
+}
+
+int PhoneBook::getTotalContacts()
+{
+    return totalContacts;
 }
