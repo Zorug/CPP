@@ -6,22 +6,21 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 22:00:34 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/05/08 23:45:54 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/05/10 21:40:11 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Contact.hpp"
+#include <string>
 #include "PhoneBook.hpp"
 
 int main()
 {
-    // aqui já é criado o construtor
     PhoneBook pb;
 
     std::string command;
 
-    while (true) // Loop infinito.
+    while (true)
     {
         std::cout << "Enter command: ";
 
@@ -29,12 +28,12 @@ int main()
 
         if (command == "ADD")
         {
-            // Criar variáveis temporárias
             std::string firstName;
             std::string lastName;
             std::string nickname;
+            std::string phoneNumber;
+            std::string darkestSecret;
 
-            // Ler input
             std::cout << "First name: ";
             std::getline(std::cin, firstName);
 
@@ -44,12 +43,41 @@ int main()
             std::cout << "Nickname: ";
             std::getline(std::cin, nickname);
 
-            // Enviar para o PhoneBook
-            pb.addContact(firstName, lastName, nickname);
+            std::cout << "Phone number: ";
+            std::getline(std::cin, phoneNumber);
+
+            std::cout << "Darkest secret: ";
+            std::getline(std::cin, darkestSecret);
+
+            pb.addContact(
+                firstName,
+                lastName,
+                nickname,
+                phoneNumber,
+                darkestSecret);
         }
         else if (command == "SEARCH")
         {
             pb.showContacts();
+
+            std::string input;
+
+            std::cout << "Choose index: ";
+
+            std::getline(std::cin, input);
+
+            int index = input[0] - '0';
+
+            if (input.length() == 1
+                && index >= 0
+                && index < 8)
+            {
+                pb.displayContact(index);
+            }
+            else
+            {
+                std::cout << "Invalid index" << std::endl;
+            }
         }
         else if (command == "EXIT")
         {

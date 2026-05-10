@@ -6,7 +6,7 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 22:00:43 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/05/08 23:43:02 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/05/10 21:38:39 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ void Contact::setNickname(std::string value)
     nickname = value;
 }
 
+void Contact::setPhoneNumber(std::string value)
+{
+    phoneNumber = value;
+}
+
+void Contact::setDarkestSecret(std::string value)
+{
+    darkestSecret = value;
+}
+
 std::string Contact::getFirstName()
 {
     return firstName;
@@ -40,4 +50,14 @@ std::string Contact::getLastName()
 std::string Contact::getNickname()
 {
     return nickname;
+}
+
+std::string Contact::getPhoneNumber()
+{
+    return phoneNumber;
+}
+
+std::string Contact::getDarkestSecret()
+{
+    return darkestSecret;
 }

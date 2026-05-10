@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/10 19:22:44 by cgross-s          #+#    #+#             */
+/*   Updated: 2026/05/10 21:30:41 by cgross-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
@@ -22,9 +34,13 @@ class PhoneBook
         void addContact(
             std::string firstName,
             std::string lastName,
-            std::string nickname);
+            std::string nickname,
+            std::string phoneNumber,
+            std::string darkestSecret);
 
         void showContacts();
+
+        void displayContact(int index);
 };
 
 #endif
