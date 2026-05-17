@@ -14,6 +14,15 @@
 
 int main()
 {
-	Zombie z;
-	z.announce();
+	// Teste com STACK
+    std::cout << "Criando zumbi na stack:" << std::endl;
+    randomChump("ZumbiStack");
+    
+    // Teste com HEAP
+    std::cout << "\nCriando zumbi no heap:" << std::endl;
+    Zombie* zumbiHeap = newZombie("ZumbiHeap");
+    zumbiHeap->announce();
+    delete zumbiHeap;
+    
+    return 0;
 }
