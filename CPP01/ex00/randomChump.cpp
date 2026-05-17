@@ -14,7 +14,7 @@
 
 void randomChump(std::string name)
 {
-	// Cria um Zombie na STACK
+	// Cria um Zombie na STACK (Pilha)
 	Zombie zombie(name);
 	zombie.announce();
 	// Quando a função termina, o destructor é chamado AUTOMATICAMENTE

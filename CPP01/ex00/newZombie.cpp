@@ -14,7 +14,7 @@
 
 Zombie* newZombie(std::string name)
 {
-	// Aloca um novo Zombie no HEAP
+	// Aloca um novo Zombie no HEAP (Monte)
 	Zombie* zombie = new Zombie(name);
 	return zombie;  // Retorna o ponteiro para o objeto alocado
 }

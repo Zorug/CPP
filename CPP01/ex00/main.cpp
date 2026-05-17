@@ -14,11 +14,11 @@
 
 int main()
 {
-	// Teste com STACK
+	// Teste com STACK (Pilha)
     std::cout << "Criando zumbi na stack:" << std::endl;
     randomChump("ZumbiStack");
     
-    // Teste com HEAP
+    // Teste com HEAP (Monte)
     std::cout << "\nCriando zumbi no heap:" << std::endl;
     Zombie* zumbiHeap = newZombie("ZumbiHeap");
     zumbiHeap->announce();
