@@ -6,7 +6,7 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 21:16:09 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/05/19 22:26:07 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/05/19 23:01:53 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 #include <fstream>	//ifstream (ler), ofstream (escrever)
 #include <iostream>	//std::cerr
 #include <string>	//std::string, find(), substr()
+
+std::string replaceAll(std::string line, const std::string& s1, const std::string& s2);
 
 int main(int argc, char **argv)
 {
@@ -56,9 +58,20 @@ int main(int argc, char **argv)
 	// Ler arquivo linha por linha (ou todo de uma vez)
 	std::string line;
 	while (std::getline(inputFile, line)) {
-		//
-		outputFile << line << std::endl;
+	    std::string replacedLine = replaceAll(line, argv[2], argv[3]);
+		outputFile << replacedLine << std::endl;
 	}
+}
 
-
+std::string replaceAll(std::string line, const std::string& s1, const std::string& s2)
+{
+	size_t pos = 0;
+	// find(s1, pos) encontra a próxima ocorrência de s1 a partir da posição pos
+	// npos é um valor especial da classe string que significa "não encontrado".
+	while ((pos = line.find(s1, pos)) != std::string::npos) {
+		// s1.length() devolve o tamanho de s1, usado na substituição
+		line.replace(pos, s1.length(), s2);
+		pos += s2.length(); // Avança para não fazer loop infinito
+	}
+	return line;
 }
