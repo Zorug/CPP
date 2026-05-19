@@ -6,7 +6,7 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 21:42:19 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/05/18 23:26:15 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/05/19 20:09:07 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@
 // Referências DEVEM ser inicializadas na lista de inicialização
 HumanA::HumanA(std::string name, Weapon& weapon) 
     : _name(name), _weapon(weapon) {
-    // Opcional: mensagem de debug
-    // std::cout << _name << " (HumanA) entrou em cena!" << std::endl;
+    std::cout << _name << " (HumanA) entrou em cena!" << std::endl;
 }
 
 HumanA::~HumanA() {
-    // Opcional: mensagem de debug
-    // std::cout << _name << " (HumanA) saiu de cena!" << std::endl;
+    std::cout << _name << " (HumanA) saiu de cena!" << std::endl;
 }
 
 void HumanA::attack(void) const {

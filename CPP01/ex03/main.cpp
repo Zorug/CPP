@@ -6,7 +6,7 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 21:42:42 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/05/18 23:35:48 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/05/19 20:12:41 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int main() {
     {
         Weapon club = Weapon("crude spiked club");
         
+        /*HumanA: Weapon& _weapon;  // REFERÊNCIA - HumanA SEMPRE tem uma arma
+            (NUNCA É NULA)*/
         HumanA bob("Bob", club);
         bob.attack();
         
@@ -30,6 +32,7 @@ int main() {
     {
         Weapon club = Weapon("crude spiked club");
         
+        /*HumanB: Weapon* _weapon;  // PONTEIRO - HumanB PODE não ter arma*/
         HumanB jim("Jim");
         jim.setWeapon(club);
         jim.attack();
