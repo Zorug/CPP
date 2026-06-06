@@ -15,6 +15,7 @@
 int main()
 {
 	// Teste com STACK (Pilha)
+	// Obs: O objeto é criado e destruído automaticamente quando a função termina
     std::cout << "Criando zumbi na stack:" << std::endl;
     randomChump("ZumbiStack");
     
