@@ -1,9 +1,6 @@
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
-//# include <iostream>
-//# include <string>
-
 /*create a class that works as a fixed-point number*/
 class Fixed {
 private:
@@ -37,5 +34,7 @@ public:
     that sets the raw value of the fixed-point number. */
     void setRawBits(int const raw); // set the raw value of the fixed-point number
 };
+
+
 
 #endif
