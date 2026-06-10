@@ -34,7 +34,7 @@ Fixed::~Fixed() {
 // A member function int getRawBits( void ) const;
 // that returns the raw value of the fixed-point value.
 int Fixed::getRawBits(void) const {
-    std::cout << "getRawBits member function called" << std::endl;
+    //std::cout << "getRawBits member function called" << std::endl;
     return this->_value; // Return the raw value of the fixed-point number
 }
 

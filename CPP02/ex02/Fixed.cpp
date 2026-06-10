@@ -34,7 +34,7 @@ Fixed::~Fixed() {
 // A member function int getRawBits( void ) const;
 // that returns the raw value of the fixed-point value.
 int Fixed::getRawBits(void) const {
-    std::cout << "getRawBits member function called" << std::endl;
+    //std::cout << "getRawBits member function called" << std::endl;
     return this->_value; // Return the raw value of the fixed-point number
 }
 
@@ -58,7 +58,7 @@ Fixed::Fixed(const int n) {
 Fixed::Fixed(const float f) {
     std::cout << "Float constructor called" << std::endl;
     // Convert float to fixed-point by multiplying by 2^fractionalBits and rounding to nearest integer
-    this->_value = static_cast<int>(std::roundf(f * (1 << _fractionalBits)));
+    this->_value = static_cast<int>(roundf(f * (1 << _fractionalBits)));
 }
 
 // ========== NEW CONVERSION MEMBER FUNCTIONS (exercise 01) ==========
