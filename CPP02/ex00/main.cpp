@@ -4,10 +4,13 @@
 int main( void ) {
 
     Fixed a; // Default constructor called
-    Fixed b( a ); // Copy constructor called
+    // COPY CONSTRUCTOR called - new object b
+    Fixed b( a ); // equivalent to Fixed b = a;
     Fixed c; // Default constructor called
 
-    c = b; // Copy assignment operator called
+    // COPY ASSIGNMENT operator called
+    // the object c is already created
+    c = b;
 
     // getRawBits member function called
     std::cout << a.getRawBits() << std::endl;
