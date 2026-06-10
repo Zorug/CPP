@@ -50,28 +50,41 @@ void Fixed::setRawBits(int const raw) {
 // it to the corresponding fixed-point value.
 Fixed::Fixed(const int n) {
     std::cout << "Int constructor called" << std::endl;
-    this->_value = n << _fractionalBits; // Convert integer to fixed-point by shifting left by the number of fractional bits
+    // Convert integer to fixed-point by shifting left by the 
+    // number of fractional bits
+    this->_value = n << _fractionalBits;
 }
 
-// A constructor that takes a constant floating-point number as a parameter and converts it to the corresponding fixed-point value.
+// A constructor that takes a constant floating-point number as a 
+// parameter and converts it to the corresponding fixed-point value.
 Fixed::Fixed(const float f) {
     std::cout << "Float constructor called" << std::endl;
-    this->_value = static_cast<int>(std::roundf(f * (1 << _fractionalBits))); // Convert float to fixed-point by multiplying by 2^fractionalBits and rounding to nearest integer
+    // Convert float to fixed-point by multiplying by 2^fractionalBits 
+    // and rounding to nearest integer
+    this->_value = static_cast<int>(roundf(f * (1 << _fractionalBits)));
 }
 
 // ========== NEW CONVERSION MEMBER FUNCTIONS (exercise 01) ==========
-// A member function float toFloat( void ) const; that converts the fixed-point value to a floating-point number.
+// A member function float toFloat( void ) const; that converts the 
+// fixed-point value to a floating-point number.
 float Fixed::toFloat(void) const {
-    return static_cast<float>(this->_value) / (1 << _fractionalBits); // Convert fixed-point to float by dividing the raw value by 2^fractionalBits
+    // Convert fixed-point to float by dividing the raw value by 
+    // 2^fractionalBits
+    return static_cast<float>(this->_value) / (1 << _fractionalBits); 
 }
 
-// A member function int toInt( void ) const; that converts the fixed-point value to an integer (by truncating the fractional part).
+// A member function int toInt( void ) const; that converts the 
+// fixed-point value to an integer (by truncating the fractional part).
 int Fixed::toInt(void) const {
-    return this->_value >> _fractionalBits; // Convert fixed-point to integer by shifting right by the number of fractional bits (truncating the fractional part)
+    // Convert fixed-point to integer by shifting right by the number of 
+    // fractional bits (truncating the fractional part)
+    return this->_value >> _fractionalBits;
 }
 
-// Overload of the insertion operator (<<) to output the fixed-point number as a floating-point value.
+// Overload of the insertion operator (<<) to output the fixed-point 
+// number as a floating-point value.
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
-    os << fixed.toFloat(); // Output the fixed-point number as a floating-point value
+    // Output the fixed-point number as a floating-point value
+    os << fixed.toFloat(); 
     return os; // Return the output stream
 }
