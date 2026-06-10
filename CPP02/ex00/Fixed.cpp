@@ -1,7 +1,7 @@
 #include "Fixed.hpp"
 #include <iostream> // std::cout, std::endl
 
-// Default constructor that initializes the fixed-point number to 0.
+// Default constructor: initializes the fixed-point number to 0.
 Fixed::Fixed() : _value(0) {
     std::cout << "Default constructor called" << std::endl;
 }
