@@ -13,14 +13,14 @@ Fixed::Fixed() : _value(0) {
 copies its value.*/
 Fixed::Fixed(const Fixed& other) {
     std::cout << "Copy constructor called" << std::endl;
-    *this = other;  // Use the copy assignment operator to copy the value
+    *this = other; 
 }
 
 // A copy assignment operator overload.
 Fixed& Fixed::operator=(const Fixed& other) {
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other) { // Check for self-assignment
-        this->_value = other.getRawBits(); // Copy the raw value
+        this->_value = other.getRawBits();
     }
     return *this; // Return the current object
 }
@@ -31,19 +31,18 @@ Fixed::~Fixed() {
 }
 
 // ========== ALREADY EXISTING MEMBER FUNCTIONS ==========
-// A member function int getRawBits( void ) const;
-// that returns the raw value of the fixed-point value.
+// Returns the raw value of the fixed-point value.
 int Fixed::getRawBits(void) const {
     //std::cout << "getRawBits member function called" << std::endl;
     return this->_value; // Return the raw value of the fixed-point number
 }
 
-// A member function void setRawBits( int const raw );
-// that sets the raw value of the fixed-point number.
+// Sets the raw value of the fixed-point number.
 void Fixed::setRawBits(int const raw) {
     std::cout << "setRawBits member function called" << std::endl;
     this->_value = raw; // Set the raw value of the fixed-point number
 }
+
 
 // ========== NEW CONSTRUCTORS (exercise 01) ==========
 // A constructor that takes a constant integer as a parameter and converts 

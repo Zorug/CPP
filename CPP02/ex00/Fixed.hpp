@@ -2,10 +2,11 @@
 # define FIXED_HPP
 
 /*create a class that works as a fixed-point number*/
+
 class Fixed {
 private:
 // An integer to store the fixed-point number value.
-    int _value; // store de fixed value
+    int _value;
 
 // number of bits for the fractional part
     static const int _fractionalBits = 8;
