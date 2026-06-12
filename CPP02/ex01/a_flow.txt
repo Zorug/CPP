@@ -1,0 +1,25 @@
+Fixed a;
+        ↓
+_value = 0
+
+a = Fixed(1234.4321f)
+        ↓
+temp._value = 316015
+        ↓
+operator=
+        ↓
+a._value = 316015
+        ↓
+temp destruído
+
+std::cout << a
+        ↓
+operator<<(std::cout, a)
+        ↓
+a.toFloat()
+        ↓
+316015 / 256
+        ↓
+1234.43359375
+        ↓
+std::cout imprime o float

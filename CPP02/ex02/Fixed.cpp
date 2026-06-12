@@ -1,6 +1,6 @@
 #include "Fixed.hpp"
 #include <iostream>
-#include <cmath> // std::roundf for rounding float to nearest integer
+#include <cmath> // std::roundf
 
 // ========== ORTHODOX CANONICAL FORM ==========
 

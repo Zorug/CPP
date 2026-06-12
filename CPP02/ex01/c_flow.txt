@@ -1,0 +1,23 @@
+42.42f
+   ↓
+Float constructor
+   ↓
+42.42 × 256
+   ↓
+10859.52
+   ↓
+roundf()
+   ↓
+10860
+   ↓
+armazenado em _value
+   ↓
+toFloat()
+   ↓
+10860 / 256
+   ↓
+42.421875
+   ↓
+operator<<
+   ↓
+std::cout

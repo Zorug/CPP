@@ -1,6 +1,6 @@
 #include "Fixed.hpp"
 #include <iostream>
-#include <cmath> // std::roundf for rounding float to nearest integer
+#include <cmath> // std::roundf
 
 // ========== ORTHODOX CANONICAL FORM ==========
 
@@ -25,65 +25,56 @@ Fixed& Fixed::operator=(const Fixed& other) {
     return *this; // Return the current object
 }
 
-// A destructor.
-Fixed::~Fixed() {
+Fixed::~Fixed() { // Destructor
     std::cout << "Destructor called" << std::endl;
 }
 
 // ========== ALREADY EXISTING MEMBER FUNCTIONS ==========
-// Returns the raw value of the fixed-point value.
+
+// Returns the raw value of the fixed-point.
 int Fixed::getRawBits(void) const {
-    //std::cout << "getRawBits member function called" << std::endl;
-    return this->_value; // Return the raw value of the fixed-point number
+    return this->_value; // Return the raw value of the fixed-point
 }
 
-// Sets the raw value of the fixed-point number.
+// Sets the raw value of the fixed-point.
 void Fixed::setRawBits(int const raw) {
     std::cout << "setRawBits member function called" << std::endl;
-    this->_value = raw; // Set the raw value of the fixed-point number
+    this->_value = raw; // Set the raw value of the fixed-point
 }
 
 
 // ========== NEW CONSTRUCTORS (exercise 01) ==========
-// A constructor that takes a constant integer as a parameter and converts 
-// it to the corresponding fixed-point value.
+
+// Takes integer and converts it to fixed-point value.
 Fixed::Fixed(const int n) {
     std::cout << "Int constructor called" << std::endl;
-    // Convert integer to fixed-point by shifting left by the 
-    // number of fractional bits
+    // Shift left by the number of fractional bits
     this->_value = n << _fractionalBits;
 }
 
-// A constructor that takes a constant floating-point number as a 
-// parameter and converts it to the corresponding fixed-point value.
+// Takes float and converts it to fixed-point.
 Fixed::Fixed(const float f) {
     std::cout << "Float constructor called" << std::endl;
-    // Convert float to fixed-point by multiplying by 2^fractionalBits 
-    // and rounding to nearest integer
+    // Multiply by 2^fractionalBits and round to nearest integer
     this->_value = static_cast<int>(roundf(f * (1 << _fractionalBits)));
 }
 
 // ========== NEW CONVERSION MEMBER FUNCTIONS (exercise 01) ==========
-// A member function float toFloat( void ) const; that converts the 
-// fixed-point value to a floating-point number.
+
+// Converts the fixed-point to float.
 float Fixed::toFloat(void) const {
-    // Convert fixed-point to float by dividing the raw value by 
-    // 2^fractionalBits
+// divide the raw value by 2^fractionalBits
     return static_cast<float>(this->_value) / (1 << _fractionalBits); 
 }
 
-// A member function int toInt( void ) const; that converts the 
-// fixed-point value to an integer (by truncating the fractional part).
+// Converts fixed-point to integer 
 int Fixed::toInt(void) const {
-    // Convert fixed-point to integer by shifting right by the number of 
-    // fractional bits (truncating the fractional part)
+// shift right by the number of fractional bits (truncating fractional part)
     return this->_value >> _fractionalBits;
 }
 
-// Overload of the insertion operator (<<) to output the fixed-point 
-// number as a floating-point value.
+// Overload operator (<<): output fixed-point as a floating.
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
-    // Output the fixed-point number as a floating-point value
     os << fixed.toFloat(); 
     return os; // Return the output stream
 }
