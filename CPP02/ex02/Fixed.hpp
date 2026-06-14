@@ -43,7 +43,8 @@ public:
     Fixed(const float f);
 
 
-// ========== NEW CONVERSION MEMBER FUNCTIONS (exercise 01) ==========
+// ======= NEW CONVERSION MEMBER FUNCTIONS (exercise 01) =======
+
 // Converts the fixed-point to float.
     float toFloat(void) const;
 // Converts fixed-point to integer 
@@ -52,26 +53,26 @@ public:
 
 // ========== NEW OPERATORS (exercise 02) ==========
 // Comparison operators: >, <, >=, <=, == and !=.
-    bool operator>(const Fixed& other) const; // greater than operator
-    bool operator<(const Fixed& other) const; // less than operator
-    bool operator>=(const Fixed& other) const; // greater than or equal to operator
-    bool operator<=(const Fixed& other) const; // less than or equal to operator
-    bool operator==(const Fixed& other) const; // equality operator
-    bool operator!=(const Fixed& other) const; // inequality operator
+    bool operator>(const Fixed& other) const;
+    bool operator<(const Fixed& other) const;
+    bool operator>=(const Fixed& other) const;
+    bool operator<=(const Fixed& other) const;
+    bool operator==(const Fixed& other) const;
+    bool operator!=(const Fixed& other) const;
 
 // Arithmetic operators: +, -, *, and /.
-    Fixed operator+(const Fixed& other) const; // addition operator
-    Fixed operator-(const Fixed& other) const; // subtraction operator
-    Fixed operator*(const Fixed& other) const; // multiplication operator
-    Fixed operator/(const Fixed& other) const; // division operator
+    Fixed operator+(const Fixed& other) const;
+    Fixed operator-(const Fixed& other) const;
+    Fixed operator*(const Fixed& other) const;
+    Fixed operator/(const Fixed& other) const;
 
-// Increment and decrement operators: both prefix and postfix forms.
+// Increment and decrement operators
     Fixed& operator++(); // prefix increment operator
     Fixed operator++(int); // postfix increment operator
     Fixed& operator--(); // prefix decrement operator
     Fixed operator--(int); // postfix decrement operator
 
-// Static member functions min and max that take two references to Fixed objects and return a reference to the smaller (for min) or larger (for max) of the two objects. These functions should be overloaded to take either const or non-const references.
+// Static member functions min and max
     static Fixed& min(Fixed& a, Fixed& b); // min function for non-const references
     static const Fixed& min(const Fixed& a, const Fixed& b); // min function for const references
     static Fixed& max(Fixed& a, Fixed& b); // max function for non-const references
