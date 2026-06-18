@@ -6,12 +6,18 @@
 
 class ClapTrap
 {
+// When attributes are private, only the class itself 
+// can access them — not even child classes. 
 /*private:
 	std::string _name; // parameter to the constructor
 	unsigned int _hitPoints; // (10) - health of the ClapTrap
 	unsigned int _energyPoints; // (10)
 	unsigned int _attackDamage; // (0)*/
 
+// Outside code (like main) cannot access it directly
+// 		→ same as private
+// Child classes can access it directly
+// 		→ unlike private
 protected:
 	std::string _name;
 	unsigned int _hitPoints;
