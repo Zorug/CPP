@@ -1,4 +1,4 @@
-#include "Cat.hpp"
+#include "../include/Cat.hpp"
 
 // Default constructor
 Cat::Cat()

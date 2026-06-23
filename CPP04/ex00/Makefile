@@ -1,18 +1,54 @@
 NAME = polymorphism
 
+# **************************************************************************** #
+# COMPILER
+# **************************************************************************** #
+
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
-OBJS = $(SRCS:.cpp=.o)
-HEADERS = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
+# **************************************************************************** #
+# SOURCES
+# **************************************************************************** #
+
+SRC_DIR = src
+OBJ_DIR = obj
+
+SRCS = \
+	$(SRC_DIR)/main.cpp \
+	$(SRC_DIR)/Animal.cpp \
+	$(SRC_DIR)/Dog.cpp \
+	$(SRC_DIR)/Cat.cpp \
+	$(SRC_DIR)/WrongAnimal.cpp \
+	$(SRC_DIR)/WrongCat.cpp
+
+OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
+
+# **************************************************************************** #
+# HEADERS
+# **************************************************************************** #
+
+HEADERS = \
+	Animal.hpp \
+	Dog.hpp \
+	Cat.hpp \
+	WrongAnimal.hpp \
+	WrongCat.hpp
+
+# **************************************************************************** #
+# RULES
+# **************************************************************************** #
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp $(HEADERS)
+#%.o: %.cpp $(HEADERS)
+#	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
+	@mkdir -p $(OBJ_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:

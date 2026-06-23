@@ -1,4 +1,4 @@
-#include "Animal.hpp"
+#include "../include/Animal.hpp"
 
 // Default constructor
 Animal::Animal() : type("Animal")
