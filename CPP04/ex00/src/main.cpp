@@ -4,6 +4,13 @@
 #include "../include/WrongAnimal.hpp"
 #include "../include/WrongCat.hpp"
 
+// The main objective of Exercise 00 is to understand and implement subtype 
+// polymorphism in C++ using virtual functions.
+
+// - Understand Virtual Functions
+// - Implement Inheritance Hierarchy
+// - Demonstrate Polymorphic Behavior
+
 int main()
 {
     std::cout << "\n========== TESTE 1: Polimorfismo correto ==========\n" << std::endl;
