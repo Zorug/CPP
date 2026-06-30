@@ -6,9 +6,9 @@
 
 int main()
 {
-    std::cout << "\n========== TESTE 1: Array de Animais ==========\n" << std::endl;
+    std::cout << "\n========== TEST 1: Array de Animais ==========\n" << std::endl;
     
-    // Criando array de 4 animais (2 Dogs, 2 Cats)
+    // Creating an array of 4 animals (2 Dogs, 2 Cats)
     Animal* animals[4];
     
     for (int i = 0; i < 4; i++)
@@ -19,18 +19,18 @@ int main()
             animals[i] = new Cat();
     }
     
-    // Fazendo cada animal emitir som
+    // Making each animal make a sound
     for (int i = 0; i < 4; i++)
     {
         std::cout << "Animal " << i << " (" << animals[i]->getType() << "): ";
         animals[i]->makeSound();
     }
     
-    // Deletando todos (como Animals!)
+    // Delete all animals (as Animals!)
     for (int i = 0; i < 4; i++)
         delete animals[i];
     
-    std::cout << "\n========== TESTE 2: Deep Copy (Dog) ==========\n" << std::endl;
+    std::cout << "\n========== TEST 2: Deep Copy (Dog) ==========\n" << std::endl;
     
     Dog originalDog;
     originalDog.setIdea(0, "I love bones!");
@@ -40,10 +40,10 @@ int main()
     std::cout << "Idea 0: " << originalDog.getIdea(0) << std::endl;
     std::cout << "Idea 1: " << originalDog.getIdea(1) << std::endl;
     
-    // Copiando (DEEP COPY!)
+    // Copy constructor is called here, creating a new Dog with its own Brain (DEEP COPY!)
     Dog copyDog(originalDog);
     
-    // Modificando o original
+    // Change the original dog's idea to see if the copy is independent
     originalDog.setIdea(0, "I want to eat!");
     
     std::cout << "\nAfter modifying original:" << std::endl;
@@ -51,9 +51,9 @@ int main()
     std::cout << "Copy Dog idea 0: " << copyDog.getIdea(0) << std::endl;
     std::cout << "Copy Dog idea 1: " << copyDog.getIdea(1) << std::endl;
     
-    std::cout << "\n✅ DEEP COPY funcionou! As cópias são independentes!" << std::endl;
+    std::cout << "\n✅ DEEP COPY worked! Copies are independent!" << std::endl;
     
-    std::cout << "\n========== TESTE 3: Deep Copy (Cat) ==========\n" << std::endl;
+    std::cout << "\n========== TEST 3: Deep Copy (Cat) ==========\n" << std::endl;
     
     Cat originalCat;
     originalCat.setIdea(0, "I love fish!");
@@ -71,9 +71,9 @@ int main()
     std::cout << "Copy Cat idea 0: " << copyCat.getIdea(0) << std::endl;
     std::cout << "Copy Cat idea 1: " << copyCat.getIdea(1) << std::endl;
     
-    std::cout << "\n✅ DEEP COPY funcionou! As cópias são independentes!" << std::endl;
+    std::cout << "\n✅ DEEP COPY worked! Copies are independent!" << std::endl;
     
-    std::cout << "\n========== TESTE 4: Teste do Enunciado ==========\n" << std::endl;
+    std::cout << "\n========== TEST 4: Test of Statement ==========\n" << std::endl;
     
     const Animal* j = new Dog();
     const Animal* i = new Cat();
@@ -83,10 +83,10 @@ int main()
     std::cout << "Cat sound: ";
     i->makeSound();
     
-    delete j;  // ✅ Deve deletar Dog E Brain
-    delete i;  // ✅ Deve deletar Cat E Brain
+    delete j;  // Should delete dog and its brain
+    delete i;  // Should delete cat and its brain
     
-    std::cout << "\n========== TESTE 5: Assignment Operator ==========\n" << std::endl;
+    std::cout << "\n========== TEST 5: Assignment Operator ==========\n" << std::endl;
     
     Dog dog1;
     dog1.setIdea(0, "Dog 1 idea");
@@ -104,16 +104,16 @@ int main()
     std::cout << "Dog 1 idea: " << dog1.getIdea(0) << std::endl;
     std::cout << "Dog 2 idea: " << dog2.getIdea(0) << std::endl;
     
-    // Modificando dog1 para provar que são independentes
+    // Modifying dog1's idea to prove they are independent
     dog1.setIdea(0, "New Dog 1 idea");
     
     std::cout << "\nAfter modifying dog1:" << std::endl;
     std::cout << "Dog 1 idea: " << dog1.getIdea(0) << std::endl;
     std::cout << "Dog 2 idea: " << dog2.getIdea(0) << std::endl;
     
-    std::cout << "\n✅ ASSIGNMENT DEEP COPY funcionou!" << std::endl;
+    std::cout << "\n✅ ASSIGNMENT DEEP COPY worked!" << std::endl;
     
-    std::cout << "\n========== FIM DOS TESTES ==========\n" << std::endl;
+    std::cout << "\n========== END OF TESTS ==========\n" << std::endl;
     
     return 0;
 }
