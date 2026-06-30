@@ -4,7 +4,7 @@
 #include "../include/WrongAnimal.hpp"
 #include "../include/WrongCat.hpp"
 
-// The main objective of Exercise 00 is to understand and implement subtype 
+// The main objective of Exercise 00 is to understand and implement subtype
 // polymorphism in C++ using virtual functions.
 
 // - Understand Virtual Functions
@@ -14,7 +14,7 @@
 int main()
 {
     std::cout << "\n========== TEST 1: Polymorphism working ==========\n" << std::endl;
-    
+
     const Animal* meta = new Animal();
     const Animal* dog = new Dog();
     const Animal* cat = new Cat();
@@ -32,8 +32,10 @@ int main()
     delete dog;
     delete cat;
 
+    // once there is no virtual function, the base class function is called 
+    // instead of the derived class function
     std::cout << "\n========== TEST 2: Without Polymorphism (Wrong) ==========\n" << std::endl;
-    
+
     const WrongAnimal* wrong_meta = new WrongAnimal();
     const WrongAnimal* wrong_cat = new WrongCat();
 
@@ -48,10 +50,10 @@ int main()
     delete wrong_cat;
 
     std::cout << "\n========== TEST 3: Copy Test ==========\n" << std::endl;
-    
+
     Dog original_dog;
     Dog copy_dog(original_dog);
-    
+
     std::cout << "Original dog type: " << original_dog.getType() << std::endl;
     std::cout << "Copy dog type: " << copy_dog.getType() << std::endl;
     original_dog.makeSound();
@@ -75,6 +77,6 @@ int main()
         delete animals[i];
 
     std::cout << "\n========== END OF TESTS ==========\n" << std::endl;
-    
+
     return 0;
 }
