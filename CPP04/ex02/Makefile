@@ -1,4 +1,4 @@
-NAME = AbstractClass
+NAME = abstractClass
 
 # **************************************************************************** #
 # COMPILER

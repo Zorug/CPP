@@ -1,4 +1,4 @@
-#include "Brain.hpp"
+#include "../include/Brain.hpp"
 
 // Default constructor
 Brain::Brain() {
