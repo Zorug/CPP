@@ -4,10 +4,13 @@
 #include "../include/WrongAnimal.hpp"
 #include "../include/WrongCat.hpp"
 
+// Objective: Learn how to safely manage dynamically allocated memory 
+// in polymorphic classes by implementing deep copy (Rule of Three).
+
 int main()
 {
     std::cout << "\n========== TEST 1: Array de Animais ==========\n" << std::endl;
-    
+
     // Creating an array of 4 animals (2 Dogs, 2 Cats)
     Animal* animals[4];
     
@@ -35,7 +38,7 @@ int main()
     Dog originalDog;
     originalDog.setIdea(0, "I love bones!");
     originalDog.setIdea(1, "I want to play!");
-    
+
     std::cout << "\nOriginal Dog ideas:" << std::endl;
     std::cout << "Idea 0: " << originalDog.getIdea(0) << std::endl;
     std::cout << "Idea 1: " << originalDog.getIdea(1) << std::endl;
