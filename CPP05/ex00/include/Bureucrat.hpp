@@ -1,6 +1,10 @@
 #ifndef BUREUCRAT_HPP
 #define BUREUCRAT_HPP
 
+#include <iostream>
+#include <string>
+#include <exception> // std::exception
+
 class Bureucrat
 {
 private:
@@ -14,7 +18,9 @@ public:
 	Bureaucrat& operator=(const Bureaucrat& other);
 	~Bureaucrat();
 
-	// Getters
+	// Getters - read but not modify
+	// const means that the functions doesnt modify the object
+	// & avoids unecessary copy of the string
 	const std::string& getName() const;
 	int getGrade() const;
 
