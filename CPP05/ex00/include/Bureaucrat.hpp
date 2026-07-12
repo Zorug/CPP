@@ -5,14 +5,14 @@
 #include <string>
 #include <exception> // std::exception
 
-class Bureucrat
+class Bureaucrat
 {
 private:
 	const	std::string _name;
 	int		_grade;
 public:
 	// Orthodox Canonical Form
-	Bureucrat();
+	Bureaucrat();
 	Bureaucrat(const std::string& name, int grade);
 	Bureaucrat(const Bureaucrat& other);
 	Bureaucrat& operator=(const Bureaucrat& other);
@@ -24,11 +24,11 @@ public:
 	const std::string& getName() const;
 	int getGrade() const;
 
-	// Methods
+	// Methods that change the grade
 	void incrementGrade();
 	void decrementGrade();
 
-	// exceptions
+	// Nested Exceptions - Class inside another class
 	// std::exception is the base class to all exceptions in C++
 	class GradeTooHighException : public std::exception {
 	public:
