@@ -16,7 +16,7 @@ int main() {
         std::cout << "Error: " << e.what() << std::endl;
     }
     
-    /*std::cout << "\n========== TEST 2: Creating invalid forms ==========" << std::endl;
+    std::cout << "\n========== TEST 2: Creating invalid forms ==========" << std::endl;
     try {
         Form f1("Too High", 0, 5);  // signGrade too high (> 1)
         std::cout << f1 << std::endl;
@@ -113,7 +113,7 @@ int main() {
         
     } catch (std::exception& e) {
         std::cout << "Error: " << e.what() << std::endl;
-    }*/
+    }
     
     std::cout << "\n========== All tests completed! ==========" << std::endl;
     return 0;
