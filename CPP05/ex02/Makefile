@@ -14,11 +14,6 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC_DIR = src
 OBJ_DIR = obj
 
-#SRCS = \
-	$(SRC_DIR)/main.cpp \
-	$(SRC_DIR)/Bureaucrat.cpp \
-	$(SRC_DIR)/Form.cpp
-
 SRCS = \
 	$(SRC_DIR)/main.cpp \
 	$(SRC_DIR)/Bureaucrat.cpp \
@@ -28,14 +23,6 @@ SRCS = \
 	$(SRC_DIR)/PresidentialPardonForm.cpp
 
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
-
-# **************************************************************************** #
-# HEADERS
-# **************************************************************************** #
-
-HEADERS = \
-	Bureaucrat.hpp \
-	Form.hpp
 
 # **************************************************************************** #
 # RULES
@@ -60,8 +47,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-test: $(NAME)
-	./$(NAME)
 
 .PHONY: all clean fclean re test

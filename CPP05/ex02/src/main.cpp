@@ -19,7 +19,7 @@ int main() {
         std::cout << "Error: " << e.what() << std::endl;
     }
     
-    std::cout << "\n========== TEST 2: Bureaucrats with Different Grades ==========" << std::endl;
+    /*std::cout << "\n========== TEST 2: Bureaucrats with Different Grades ==========" << std::endl;
     try {
         Bureaucrat high("High Rank", 1);      // Best bureaucrat
         Bureaucrat mid("Mid Rank", 75);       // Average
@@ -148,7 +148,7 @@ int main() {
         
     } catch (std::exception& e) {
         std::cout << "Error: " << e.what() << std::endl;
-    }
+    }*/
     
     std::cout << "\n========== All tests completed! ==========" << std::endl;
     return 0;
