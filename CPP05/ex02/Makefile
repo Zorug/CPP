@@ -1,4 +1,4 @@
-NAME = maggots
+NAME = needForm
 
 # **************************************************************************** #
 # COMPILER
@@ -14,10 +14,18 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC_DIR = src
 OBJ_DIR = obj
 
-SRCS = \
+#SRCS = \
 	$(SRC_DIR)/main.cpp \
 	$(SRC_DIR)/Bureaucrat.cpp \
 	$(SRC_DIR)/Form.cpp
+
+SRCS = \
+	$(SRC_DIR)/main.cpp \
+	$(SRC_DIR)/Bureaucrat.cpp \
+	$(SRC_DIR)/AForm.cpp \
+	$(SRC_DIR)/ShrubberyCreationForm.cpp \
+	$(SRC_DIR)/RobotomyRequestForm.cpp \
+	$(SRC_DIR)/PresidentialPardonForm.cpp
 
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
@@ -25,7 +33,7 @@ OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 # HEADERS
 # **************************************************************************** #
 
-#HEADERS = \
+HEADERS = \
 	Bureaucrat.hpp \
 	Form.hpp
 
