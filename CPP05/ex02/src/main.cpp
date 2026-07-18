@@ -19,7 +19,7 @@ int main() {
         std::cout << "Error: " << e.what() << std::endl;
     }
     
-    /*std::cout << "\n========== TEST 2: Bureaucrats with Different Grades ==========" << std::endl;
+    std::cout << "\n========== TEST 2: Bureaucrats with Different Grades ==========" << std::endl;
     try {
         Bureaucrat high("High Rank", 1);      // Best bureaucrat
         Bureaucrat mid("Mid Rank", 75);       // Average
@@ -50,7 +50,7 @@ int main() {
         std::cout << "Error: " << e.what() << std::endl;
     }
     
-    std::cout << "\n========== TEST 4: Execute Form Without Signing ==========" << std::endl;
+    /*std::cout << "\n========== TEST 4: Execute Form Without Signing ==========" << std::endl;
     try {
         Bureaucrat boss("Boss", 1);
         ShrubberyCreationForm shrub("park");
