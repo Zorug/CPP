@@ -1,4 +1,4 @@
-NAME = coffeeMaking
+NAME = ex00
 
 # **************************************************************************** #
 # COMPILER
@@ -15,7 +15,7 @@ SRC_DIR = src
 OBJ_DIR = obj
 
 SRCS = \
-	$(SRC_DIR)/ScalarConverter.cpp \
+	$(SRC_DIR)/main.cpp \
 	$(SRC_DIR)/ScalarConverter.cpp
 
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
