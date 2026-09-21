@@ -1,4 +1,4 @@
-NAME = coffeeMaking
+NAME = ex01
 
 # **************************************************************************** #
 # COMPILER
@@ -16,12 +16,7 @@ OBJ_DIR = obj
 
 SRCS = \
 	$(SRC_DIR)/main.cpp \
-	$(SRC_DIR)/Bureaucrat.cpp \
-	$(SRC_DIR)/AForm.cpp \
-	$(SRC_DIR)/ShrubberyCreationForm.cpp \
-	$(SRC_DIR)/RobotomyRequestForm.cpp \
-	$(SRC_DIR)/PresidentialPardonForm.cpp \
-	$(SRC_DIR)/Intern.cpp
+	$(SRC_DIR)/Serializer.cpp \
 
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
