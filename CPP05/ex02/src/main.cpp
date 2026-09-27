@@ -50,7 +50,7 @@ int main() {
         std::cout << "Error: " << e.what() << std::endl;
     }
     
-    /*std::cout << "\n========== TEST 4: Execute Form Without Signing ==========" << std::endl;
+    std::cout << "\n========== TEST 4: Execute Form Without Signing ==========" << std::endl;
     try {
         Bureaucrat boss("Boss", 1);
         ShrubberyCreationForm shrub("park");
@@ -91,7 +91,7 @@ int main() {
         std::cout << "Error: " << e.what() << std::endl;
     }
     
-    std::cout << "\n========== TEST 7: Presidential Pardon Form ==========" << std::endl;
+    /*std::cout << "\n========== TEST 7: Presidential Pardon Form ==========" << std::endl;
     try {
         Bureaucrat high("President", 1);
         PresidentialPardonForm pardon("Ford Prefect");
