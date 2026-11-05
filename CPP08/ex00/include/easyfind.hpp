@@ -1,3 +1,10 @@
+/* ************************************************************************** */
+/*  ex00 - easyfind.hpp                                                       */
+/*                                                                            */
+/*  Objective: Find the FIRST occurrence of an integer inside an              */
+/*  integer container (vector, list, deque...).                               */
+/* ************************************************************************** */
+
 #ifndef EASYFIND_HPP
 #define EASYFIND_HPP
 
