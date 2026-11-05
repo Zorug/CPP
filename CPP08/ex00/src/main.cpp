@@ -1,6 +1,27 @@
-#include <iostream>
-#include <vector>
-#include <list>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/05 19:23:34 by cgross-s          #+#    #+#             */
+/*   Updated: 2026/11/05 19:23:39 by cgross-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*  ex00 - main.cpp                                                           */
+/*                                                                            */
+/*  Tests for the easyfind template function. We cover 3 scenarios:           */
+/*    1. Success in a std::vector (element exists)                            */
+/*    2. Failure in a std::vector (element does not exist -> exception)       */
+/*    3. Success in a std::list   (proves the template is generic)            */
+/* ************************************************************************** */
+
+#include <iostream>     // std::cout, std::endl
+#include <vector>       // std::vector (container with contiguous memory)
+#include <list>         // std::list   (doubly linked list)
 #include "../include/easyfind.hpp"
 
 int main() {
