@@ -6,17 +6,17 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 14:46:45 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/11/06 14:46:46 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/11/06 15:40:33 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SPAN_HPP
 #define SPAN_HPP
 
-#include <vector>
-#include <algorithm>
-#include <iterator>
-#include <stdexcept>
+#include <vector>       // std::vector
+#include <algorithm>    // STL algorithms
+#include <iterator>     // std::distance
+#include <stdexcept>    // std::out_of_range
 
 class Span {
 private:
