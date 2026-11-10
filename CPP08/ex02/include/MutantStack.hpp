@@ -6,13 +6,26 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 14:13:58 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/11/10 14:48:45 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/11/10 15:28:34 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** ex02 - Mutated abomination
+**
+** std::stack is a "container adapter": underneath it stores data in
+** another container (by default, std::deque) but only exposes push/pop/top/size/
+** empty. It lacks begin()/end(), so it is not iterable.
+**
+** EXERCISE TRICK: the internal container is a PROTECTED member called
+** 'c'. If we inherit from std::stack, we have access to 'c' and can expose its
+** iterators. We end up with a normal stack + begin()/end().
+*/
 
 #ifndef MUTATEDSTACK_HPP
 #define MUTATEDSTACK_HPP
 
+/* <stack> provides std::stack (and, indirectly, the default container). */
 #include <stack>
 
 template <typename T>
