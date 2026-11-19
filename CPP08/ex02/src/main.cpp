@@ -6,7 +6,7 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 14:14:56 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/11/10 14:48:43 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/11/19 07:44:48 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 #include "../include/MutantStack.hpp"
 
 int main() {
-    // 🧪 Testing MutatedStack
-    MutatedStack<int> mstack;
+    // 🧪 Testing MutantStack
+    MutantStack<int> mstack;
 
     mstack.push(5);
     mstack.push(17);
@@ -32,8 +32,8 @@ int main() {
     mstack.push(737);
     mstack.push(0);
 
-    MutatedStack<int>::iterator it = mstack.begin();
-    MutatedStack<int>::iterator ite = mstack.end();
+    MutantStack<int>::iterator it = mstack.begin();
+    MutantStack<int>::iterator ite = mstack.end();
 
     ++it;
     --it;

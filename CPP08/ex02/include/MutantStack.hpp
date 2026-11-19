@@ -6,7 +6,7 @@
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 14:13:58 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/11/10 15:28:34 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/11/19 07:42:06 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,25 +22,25 @@
 ** iterators. We end up with a normal stack + begin()/end().
 */
 
-#ifndef MUTATEDSTACK_HPP
-#define MUTATEDSTACK_HPP
+#ifndef MUTANTSTACK_HPP
+#define MUTANTSTACK_HPP
 
 /* <stack> provides std::stack (and, indirectly, the default container). */
 #include <stack>
 
 template <typename T>
-class MutatedStack : public std::stack<T> {
+class MutantStack : public std::stack<T> {
 public:
     // 🏗️ Orthodox Canonical Form
-    MutatedStack() : std::stack<T>() {}
-    MutatedStack(const MutatedStack &other) : std::stack<T>(other) {}
-    MutatedStack &operator=(const MutatedStack &other) {
+    MutantStack() : std::stack<T>() {}
+    MutantStack(const MutantStack &other) : std::stack<T>(other) {}
+    MutantStack &operator=(const MutantStack &other) {
         if (this != &other) {
             std::stack<T>::operator=(other);
         }
         return *this;
     }
-    virtual ~MutatedStack() {}
+    virtual ~MutantStack() {}
 
     // 🔄 Iterator definitions
     typedef typename std::stack<T>::container_type::iterator iterator;

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   .main_comentado.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cgross-s <cgross-s@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 14:14:56 by cgross-s          #+#    #+#             */
-/*   Updated: 2026/11/10 14:48:43 by cgross-s         ###   ########.fr       */
+/*   Updated: 2026/11/19 07:39:58 by cgross-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main() {
     /* ==================================================================== */
     /*  1. OPERAÇÕES NORMAIS DE STACK (herdadas de std::stack)              */
     /* ==================================================================== */
-    MutatedStack<int> mstack;
+    MutantStack<int> mstack;
 
     mstack.push(5);     /* stack: 5 */
     mstack.push(17);    /* stack: 5, 17 */
@@ -47,8 +47,8 @@ int main() {
     /* ==================================================================== */
 
     /* begin() aponta para o fundo da stack, end() para "depois do topo". */
-    MutatedStack<int>::iterator it = mstack.begin();
-    MutatedStack<int>::iterator ite = mstack.end();
+    MutantStack<int>::iterator it = mstack.begin();
+    MutantStack<int>::iterator ite = mstack.end();
 
     /*
     ** ++it e --it: teste rápido de que o iterador é bidirecional
@@ -62,7 +62,7 @@ int main() {
     ** Saída esperada: 5, 3, 5, 737, 0 (uma por linha).
     ** Idêntica à que obterias com std::list (usando push_back).
     */
-    std::cout << "Elements in MutatedStack:" << std::endl;
+    std::cout << "Elements in MutantStack:" << std::endl;
     while (it != ite) {
         std::cout << *it << std::endl;
         ++it;
@@ -73,7 +73,7 @@ int main() {
     /* ==================================================================== */
 
     /*
-    ** Como MutatedStack HERDA PUBLICAMENTE de std::stack<int>, podemos
+    ** Como MutantStack HERDA PUBLICAMENTE de std::stack<int>, podemos
     ** construir uma std::stack<int> a partir dela (o objeto é "fatiado"
     ** para a parte base). Se compilar, a herança está correta.
     */
